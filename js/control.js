@@ -20,13 +20,7 @@ const getData = () => {
   return (
     new Date().getHours().toString() +
     " : " +
-    new Date().getMinutes().toString() +
-    " " +
-    new Date().getDate().toString() +
-    "." +
-    (new Date().getMonth().toString() + 1) +
-    "." +
-    new Date().getFullYear().toString()
+    new Date().getMinutes().toString()
   );
 };
 const addForm = document.querySelector("#addForm");
@@ -43,6 +37,11 @@ addForm.addEventListener("submit", (e) => {
     addForm
   );
 });
+
+// const downBtn = document.querySelector("#bottom");
+// downBtn.onclick(() => {
+//   textVVV.focus();
+// });
 
 const taskListUl = document.querySelector("#taskList");
 
@@ -99,11 +98,13 @@ function createList(obj) {
       { className: "message col-8 col-lg-10 col-md-12 " || "yoq" },
       li
     );
+
     const textVVV = getElement(
       "textarea",
       { className: "border-0", value: task.text, readOnly: true },
       message
     );
+
     let editBtn;
     const saveBtnSave = getElement(
       "p",
@@ -153,6 +154,7 @@ function createList(obj) {
       },
       message
     );
+    textVVV.focus();
   });
 }
 
