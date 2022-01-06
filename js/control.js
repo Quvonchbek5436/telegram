@@ -94,7 +94,11 @@ function createList(obj) {
       { className: "gap-3 d-flex align-items-center" },
       head
     );
-    const message = getElement("div", { className: "message" || "yoq" }, li);
+    const message = getElement(
+      "div",
+      { className: "message col-8 col-lg-10 col-md-12 " || "yoq" },
+      li
+    );
     const textVVV = getElement(
       "textarea",
       { className: "border-0", value: task.text, readOnly: true },
@@ -110,7 +114,7 @@ function createList(obj) {
     const saveBtn = getElement(
       "button",
       {
-        className: " btn btn-success d-none",
+        className: " btn btn-success d-none ",
         innerHTML: `<i class="fas fa-check"></i>`,
         onclick: () => {
           textVVV.readOnly = true;

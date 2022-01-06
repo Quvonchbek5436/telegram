@@ -34,13 +34,14 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.411);
 }
 .message {
-  width: 40%;
+  width: 50%;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #182533;
-  margin: 10px 0 0 70px;
+  margin: 10px 10px 0 70px;
   height: auto;
 }
+
 .message textarea {
   background: transparent !important;
   font-size: 22px;
@@ -73,11 +74,12 @@ body {
   transform: translateY(-10px) translateX(-0.5px);
 }
 
-.chiziq,
-.chiziq1 {
+.chiziq {
   height: 10vh;
 }
-
+.chiziq1 {
+  height: 20vh;
+}
 .message {
   display: flex;
   align-items: start;
@@ -104,4 +106,15 @@ header {
   border-radius: 50%;
   width: 80px;
   height: 80px;
+}
+@media screen and (max-width: 771px) {
+  .message {
+    width: 90%;
+    margin: 10px 10px 0 20px !important;
+  }
+}
+@media screen and (max-width: 345px) {
+  header h1 {
+    display: none;
+  }
 }
